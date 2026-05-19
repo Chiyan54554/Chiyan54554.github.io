@@ -257,194 +257,181 @@ body [data-aos='zoom-in'] {
 .article-entry dt {
   font-weight: bold;
 }
-:root {
-  --font-icon: 'Font Awesome 7 Free', 'Font Awesome 7 Brands', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Brands', 'FontAwesome';
+@font-face {
+  font-family: 'iconfont';
+  src: url("//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2") format('woff2');
+  font-display: swap;
 }
 .archives-tag-list-link:before {
-  font-family: var(--font-icon);
-  content: '\f02b';
+  font-family: 'iconfont';
+  content: '\e622';
 }
 .archives-category-list-link:before {
-  font-family: var(--font-icon);
-  content: '\f02e';
+  font-family: 'iconfont';
+  content: '\e604';
 }
 .article-date-link:before {
-  font-family: var(--font-icon);
-  content: '\f017';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e606';
 }
 .article-category-link:before {
-  font-family: var(--font-icon);
-  content: '\f02e';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e604';
 }
 .article-tag-list-link:before {
-  font-family: var(--font-icon);
-  content: '\f02b';
+  font-family: 'iconfont';
+  content: '\e622';
 }
 .article-comment-link:before {
-  font-family: var(--font-icon);
-  content: '\f075';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e608';
 }
 .icon-copyright:before {
-  font-family: var(--font-icon);
-  content: '\f1f9';
+  font-family: 'iconfont';
+  content: '\e60a';
 }
 .icon-brush:before {
-  font-family: var(--font-icon);
-  content: '\f1fc';
+  font-family: 'iconfont';
+  content: '\e618';
 }
 .icon-coffee:before {
-  font-family: var(--font-icon);
-  content: '\f0f4';
+  font-family: 'iconfont';
+  content: '\e607';
 }
 .icon-eye:before {
-  font-family: var(--font-icon);
-  content: '\f06e';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e60f';
 }
 .icon-user:before {
-  font-family: var(--font-icon);
-  content: '\f007';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e628';
 }
 #main-nav-toggle:before {
-  font-family: var(--font-icon);
-  content: '\f0c9';
+  font-family: 'iconfont';
+  content: '\e62f';
 }
 #nav-rss-link:before {
-  font-family: var(--font-icon);
-  content: '\f09e';
+  font-family: 'iconfont';
+  content: '\e61f';
 }
 #nav-search-btn:before {
-  font-family: var(--font-icon);
-  content: '\f002';
+  font-family: 'iconfont';
+  content: '\e631';
 }
 #nav-sun-btn:before {
-  font-family: var(--font-icon);
-  content: '\f185';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e621';
 }
 #nav-moon-btn:before {
-  font-family: var(--font-icon);
-  content: '\f186';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e617';
 }
 #nav-circle-half-stroke-btn:before {
-  font-family: var(--font-icon);
-  content: '\f042';
+  font-family: 'iconfont';
+  content: '\e641';
 }
 #nav-language-btn:before {
-  font-family: var(--font-icon);
-  content: '\f1ab';
+  font-family: 'iconfont';
+  content: '\e642';
 }
 .icon-copy:before {
-  font-family: var(--font-icon);
-  content: '\f0c5';
+  font-family: 'iconfont';
+  content: '\e60c';
 }
 .icon-chevron-down:before {
-  font-family: var(--font-icon);
-  content: '\f078';
+  font-family: 'iconfont';
+  content: '\e609';
 }
 .icon-check:before {
-  font-family: var(--font-icon);
-  content: '\f00c';
+  font-family: 'iconfont';
+  content: '\e636';
 }
 .icon-times:before {
-  font-family: var(--font-icon);
-  content: '\f00d';
+  font-family: 'iconfont';
+  content: '\e637';
 }
 .icon-calendar:before {
-  font-family: var(--font-icon);
-  content: '\f133';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e605';
 }
 .icon-calendar-plus:before {
-  font-family: var(--font-icon);
-  content: '\f271';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e648';
 }
 .icon-pencil:before {
-  font-family: var(--font-icon);
-  content: '\f5ad';
+  font-family: 'iconfont';
+  content: '\e61b';
 }
 .icon-clock:before {
-  font-family: var(--font-icon);
-  content: '\f252';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e613';
 }
 .post-sticky:before {
-  font-family: var(--font-icon);
-  content: '\f164';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e627';
 }
 .popup-btn-close:before {
-  font-family: var(--font-icon);
-  content: '\f057';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e626';
 }
 .reimu-search-input-icon:before {
-  font-family: var(--font-icon);
-  content: '\f002';
+  font-family: 'iconfont';
+  content: '\e631';
 }
 .ais-pagination--item__previous a:before {
-  font-family: var(--font-icon);
-  content: '\f104';
+  font-family: 'iconfont';
+  content: '\e601';
 }
 .ais-pagination--item__next a:before {
-  font-family: var(--font-icon);
-  content: '\f105';
+  font-family: 'iconfont';
+  content: '\e630';
 }
 .icon-github:before {
-  content: '\f09b';
+  content: '\e619';
 }
 .icon-instagram:before {
-  content: '\f16d';
+  content: '\e615';
 }
 .icon-discord:before {
-  content: '\f392';
+  content: '\e60d';
 }
 .icon-email:before {
-  content: '\f0e0';
-  font-weight: 900;
+  content: '\e63c';
 }
 .sidebar-toc-btn:before {
-  font-family: var(--font-icon);
-  content: '\f0e8';
+  font-family: 'iconfont';
+  content: '\e633';
 }
 .sidebar-common-btn:before {
-  font-family: var(--font-icon);
-  content: '\e3af';
+  font-family: 'iconfont';
+  content: '\e632';
 }
 .sidebar-top .arrow-up:before {
-  font-family: var(--font-icon);
-  content: '\f062';
+  font-family: 'iconfont';
+  content: '\e634';
 }
 .icon-link:before {
-  font-family: var(--font-icon);
-  content: '\f0c1';
+  font-family: 'iconfont';
+  content: '\e639';
 }
 .icon-globe:before {
-  font-family: var(--font-icon);
-  content: '\f0ac';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e638';
 }
 .icon-creative-commons:before {
-  font-family: var(--font-icon);
-  content: '\f25e';
+  font-family: 'iconfont';
+  content: '\e63a';
 }
 .icon-taichi:before {
-  font-family: var(--font-icon);
-  content: '\f6ad';
+  font-family: 'iconfont';
+  content: '\e62b';
 }
 .icon-image:before {
-  font-family: var(--font-icon);
-  content: '\f03e';
-  font-weight: 900;
+  font-family: 'iconfont';
+  content: '\e63f';
 }
 .icon {
-  font-family: var(--font-icon);
+  font-family: 'iconfont';
 }
 html,
 body,
@@ -1053,7 +1040,7 @@ button {
 .article-entry h4 a:first-of-type,
 .article-entry h5 a:first-of-type,
 .article-entry h6 a:first-of-type {
-  font-family: var(--font-icon);
+  font-family: 'iconfont';
   opacity: 0.5;
   margin-right: 4px;
   transition: 0.3s;
@@ -1089,8 +1076,8 @@ button {
 .article-entry .friend-item-wrap a,
 .article-entry a.article-gallery-item,
 .article-entry .nav-tabs a)::after {
-  font-family: var(--font-icon);
-  content: '\f0c1';
+  font-family: 'iconfont';
+  content: '\e639';
   font-size: 0.5em;
   margin: 0 0.5em;
   vertical-align: middle;
@@ -1102,8 +1089,8 @@ button {
 .article-entry h4 a,
 .article-entry h5 a,
 .article-entry h6 a) code::after {
-  font-family: var(--font-icon);
-  content: '\f0c1';
+  font-family: 'iconfont';
+  content: '\e639';
   font-size: 0.5em;
   margin: 0 0.5em;
   vertical-align: middle;
@@ -2503,7 +2490,7 @@ pre .emphasis {
 .custom-block .custom-block-title:before {
   font-weight: normal;
   margin-right: 8px;
-  font-family: var(--font-icon);
+  font-family: 'iconfont';
 }
 .custom-block.info {
   background: var(--color-info-bg);
@@ -2512,7 +2499,7 @@ pre .emphasis {
   box-shadow: 0 0 5px 2px var(--color-info-shadow);
 }
 .custom-block.info .custom-block-title:before {
-  content: '\f05a';
+  content: '\e647';
 }
 .custom-block.warning {
   background: var(--color-warning-bg);
@@ -2521,7 +2508,7 @@ pre .emphasis {
   border-left: 6px var(--color-warning-text) solid;
 }
 .custom-block.warning .custom-block-title:before {
-  content: '\f06a';
+  content: '\e646';
 }
 .custom-block.danger {
   background: var(--color-danger-bg);
@@ -2530,8 +2517,7 @@ pre .emphasis {
   border-left: 6px var(--color-danger-text) solid;
 }
 .custom-block.danger .custom-block-title:before {
-  content: '\f057';
-  font-weight: 900;
+  content: '\e645';
 }
 .custom-block.tip {
   background: var(--color-tip-bg);
@@ -2540,8 +2526,7 @@ pre .emphasis {
   border-left: 6px var(--color-tip-text) solid;
 }
 .custom-block.tip .custom-block-title:before {
-  content: '\f058';
-  font-weight: 900;
+  content: '\e643';
 }
 .custom-block.important {
   background: var(--color-important-bg);
@@ -2550,8 +2535,7 @@ pre .emphasis {
   border-left: 6px var(--color-important-text) solid;
 }
 .custom-block.important .custom-block-title:before {
-  content: '\f192';
-  font-weight: 900;
+  content: '\e649';
 }
 .custom-block p {
   margin: 12px 0;
@@ -2569,7 +2553,7 @@ pre .emphasis {
   height: 48px;
   background-color: var(--color-wrap);
   border-radius: 50%;
-  font-family: font-icon;
+  font-family: 'iconfont';
   box-shadow: var(--shadow-card-hover);
   z-index: 999;
   cursor: var(--cursor-pointer) !important;
@@ -2785,7 +2769,7 @@ pre .emphasis {
   align-items: center;
   width: 36px;
   height: 25px;
-  font: 20px var(--font-icon);
+  font: 20px 'iconfont';
   transition: transform 0.2s;
   will-change: transform;
 }
