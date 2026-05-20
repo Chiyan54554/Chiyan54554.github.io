@@ -12,20 +12,24 @@
     Chiyan&#39;s Blog
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic|Noto Serif TC:400,400italic,700,700italic|JetBrains Mono:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic|Noto Serif TC:400,400italic,700,700italic|JetBrains Mono:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
     <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta property="og:type" content="website">
+    <meta name="description" content="赤焰的程式競賽與資安學習筆記">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Chiyan&#39;s Blog">
 <meta property="og:url" content="https://chiyan54554.github.io/404.html">
 <meta property="og:site_name" content="Chiyan&#39;s Blog">
+<meta property="og:description" content="赤焰的程式競賽與資安學習筆記">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://chiyan54554.github.io/images/banner.webp">
+<meta property="og:image" content="https://chiyan54554.github.io/images/koyuki-banner.png">
 <meta property="article:author" content="赤焰 (Chiyan)">
+<meta property="article:tag" content="程式競賽, 資安, CTF, 學習筆記, Chiyan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://chiyan54554.github.io/images/banner.webp">
+<meta name="twitter:image" content="https://chiyan54554.github.io/images/koyuki-banner.png">
+      <meta name="keywords" content="程式競賽, 資安, CTF, 學習筆記, Chiyan">
     <link rel="alternate" href="/atom.xml" title="Chiyan's Blog" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -38,6 +42,88 @@
     
 <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
 
+    <style>
+  :root {
+    --reimu-card-radius: 14px;
+  }
+
+  body {
+    letter-spacing: 0;
+  }
+
+  #nav,
+  .nav {
+    min-height: 64px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 28px rgba(35, 35, 35, 0.08);
+  }
+
+  #nav .menus_item,
+  .nav .menus_item {
+    padding-inline: 18px;
+  }
+
+  #banner,
+  .banner {
+    min-height: 520px;
+  }
+
+  #banner::after,
+  .banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.30)),
+      radial-gradient(circle at center, rgba(0,0,0,0.10), rgba(0,0,0,0.30));
+    pointer-events: none;
+  }
+
+  #site-title,
+  .site-title {
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.42);
+  }
+
+  #site-subtitle,
+  .site-subtitle {
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.38);
+  }
+
+  .recent-post-item,
+  .card-widget {
+    border-radius: var(--reimu-card-radius);
+    box-shadow: 0 18px 48px rgba(45, 45, 45, 0.13);
+  }
+
+  .recent-post-item .post_cover img,
+  .recent-post-item .post-cover img {
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    #banner,
+    .banner {
+      min-height: 420px;
+    }
+
+    #nav,
+    .nav {
+      min-height: 56px;
+    }
+
+    .recent-post-item,
+    .card-widget {
+      border-radius: 12px;
+    }
+  }
+
+  [data-theme="dark"] #nav,
+  [data-theme="dark"] .nav {
+    background: rgba(30, 32, 39, 0.82);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  }
+</style>
 <meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
@@ -132,7 +218,7 @@
 
   <script>
     var setupFirework = () => {
-      if (!false || !window.matchMedia('(max-width: 768px)').matches) {
+      if (!true || !window.matchMedia('(max-width: 768px)').matches) {
         window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'));
       }
     }
@@ -150,6 +236,16 @@
 
 
 
+  
+<script src="https://npm.webcache.cn/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha384-caMDqvgav&#x2F;HWdEYQU1QRRHMLleigpL1YHAG0m371DhzfL8rRzUyOb+bEHtwlmYjD" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: false,
+      ignores: []
+    });
+  </script>
 
 <div id="lazy-script">
   <div>
@@ -170,9 +266,6 @@
   </script>
   
 
-
-  
-<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
 
 
 <script>

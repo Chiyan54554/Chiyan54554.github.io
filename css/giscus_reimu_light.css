@@ -2,16 +2,16 @@
  * Copyright (c) 2018 GitHub Inc.
  * https://github.com/primer/primitives/blob/main/LICENSE
  */
-@import url("https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic|Noto Serif TC:400,400italic,700,700italic|JetBrains Mono:400,400italic,700,700italic&display=swap");
 main {
-  --red-0: #ff0000;
-  --red-1: #ff5252;
-  --red-2: #ff7c7c;
-  --red-3: #ffafaf;
-  --red-4: #ffd0d0;
-  --red-5: #ffecec;
-  --red-5-5: #fff3f3;
-  --red-6: #fff7f7;
+  --red-0: #ff4d57;
+  --red-1: #ff6670;
+  --red-2: #ff858c;
+  --red-3: #ffb1b6;
+  --red-4: #ffd5d8;
+  --red-5: #fff0f1;
+  --red-5-5: #fff6f7;
+  --red-6: #fffafa;
   --color-prettylights-syntax-comment: #6e7781;
   --color-prettylights-syntax-constant: #0550ae;
   --color-prettylights-syntax-entity: #8250df;
@@ -108,7 +108,7 @@ main .gsc-loading-image {
 }
 main {
   cursor: var(--cursor-default);
-  font-family: 'Mulish','Noto Serif SC', '-apple-system','PingFang SC','Microsoft YaHei','sans-serif';
+  font-family: 'Mulish','Noto Serif SC','Noto Serif TC', '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','PingFang TC','Microsoft JhengHei';
 }
 a,
 button {
@@ -116,7 +116,7 @@ button {
 }
 pre,
 code {
-  font-family: 'Menlo','Monaco','Consolas','monospace' !important;
+  font-family: 'JetBrains Mono', 'Menlo','Monaco','Consolas','monospace' !important;
 }
 main span:not(button span),
 main p:not(button p),
