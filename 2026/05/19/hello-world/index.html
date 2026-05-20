@@ -27,9 +27,7 @@
 <meta property="article:published_time" content="2026-05-19T05:35:03.891Z">
 <meta property="article:modified_time" content="2026-05-19T05:35:03.891Z">
 <meta property="article:author" content="赤焰 (Chiyan)">
-<meta property="article:tag" content="程式競賽, 資安, CTF, 學習筆記, Chiyan">
 <meta name="twitter:card" content="summary">
-      <meta name="keywords" content="程式競賽, 資安, CTF, 學習筆記, Chiyan">
     <link rel="alternate" href="/atom.xml" title="Chiyan's Blog" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -44,84 +42,257 @@
 
     <style>
   :root {
-    --reimu-card-radius: 14px;
+    --reimu-card-radius: 16px;
   }
 
   body {
     letter-spacing: 0;
   }
 
-  #nav,
-  .nav {
-    min-height: 64px;
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 8px 28px rgba(35, 35, 35, 0.08);
+  #header-nav {
+    min-height: 62px;
+    background: rgba(255, 255, 255, 0.78);
+    -webkit-backdrop-filter: blur(16px) saturate(135%);
+    backdrop-filter: blur(16px) saturate(135%);
+    box-shadow: 0 8px 30px rgba(40, 40, 40, 0.08);
   }
 
-  #nav .menus_item,
-  .nav .menus_item {
+  #header-nav:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .nav-icon,
+  .main-nav-link-wrap,
+  .main-nav-link,
+  .main-nav-icon {
+    color: var(--red-1);
+  }
+
+  .main-nav-link-wrap {
     padding-inline: 18px;
   }
 
-  #banner,
-  .banner {
-    min-height: 520px;
+  .main-nav-link {
+    letter-spacing: 0;
+    opacity: 0.78;
   }
 
-  #banner::after,
-  .banner::after {
+  #header {
+    min-height: 470px;
+    height: 46vh;
+    max-height: 560px;
+    overflow: hidden;
+  }
+
+  #header::after {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: -1;
     background:
-      linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.30)),
-      radial-gradient(circle at center, rgba(0,0,0,0.10), rgba(0,0,0,0.30));
+      linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.20) 52%, rgba(255,255,255,0.50) 100%),
+      radial-gradient(circle at 50% 46%, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.28) 82%);
     pointer-events: none;
   }
 
-  #site-title,
-  .site-title {
-    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.42);
+  #header img {
+    height: 100%;
+    object-position: center 42%;
+    -webkit-mask: none;
+    mask: none;
   }
 
-  #site-subtitle,
-  .site-subtitle {
-    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.38);
+  #header-title {
+    top: 49%;
+    z-index: 1;
   }
 
-  .recent-post-item,
+  #logo {
+    letter-spacing: 1px;
+    text-shadow: 0 5px 22px rgba(0, 0, 0, 0.46);
+  }
+
+  #subtitle {
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.42);
+  }
+
+  #content {
+    padding-top: 34px;
+    gap: 26px;
+  }
+
+  #main,
+  #content.sidebar-right #main {
+    margin-inline: 0;
+  }
+
+  .sidebar-left #sidebar,
+  .sidebar-right #sidebar {
+    margin-inline: 0;
+  }
+
+  .post-wrapper,
+  .post-wrap,
+  .sidebar-wrap,
   .card-widget {
     border-radius: var(--reimu-card-radius);
-    box-shadow: 0 18px 48px rgba(45, 45, 45, 0.13);
   }
 
-  .recent-post-item .post_cover img,
-  .recent-post-item .post-cover img {
-    object-fit: cover;
+  .post-wrap,
+  .sidebar-wrap,
+  .card-widget {
+    box-shadow: 0 18px 48px rgba(45, 45, 45, 0.12);
   }
 
-  @media (max-width: 768px) {
-    #banner,
-    .banner {
-      min-height: 420px;
+  .post-wrap {
+    height: 244px;
+    margin-bottom: 36px;
+    overflow: hidden;
+  }
+
+  .post-info {
+    padding: 22px 28px;
+  }
+
+  .post-meta {
+    justify-content: center;
+    gap: 10px;
+    margin: 2px 0 10px;
+  }
+
+  .post-title {
+    padding: 16px 0 18px;
+    color: var(--red-1);
+    font-size: 26px;
+    letter-spacing: 0;
+  }
+
+  .post-article {
+    color: var(--grey-8);
+    line-height: 1.95;
+  }
+
+  .post-cover {
+    width: 38%;
+  }
+
+  .post-cover.left,
+  .post-cover.right {
+    border-radius: var(--reimu-card-radius) 0 0 var(--reimu-card-radius);
+  }
+
+  .post-cover img {
+    object-position: center center;
+  }
+
+  .sidebar-wrap {
+    padding: 14px 0 22px;
+  }
+
+  .sidebar-author img {
+    width: 96px;
+    height: 96px;
+    min-width: 96px;
+    min-height: 96px;
+    margin: 14px 20px 16px;
+    box-shadow: 0 0 28px rgba(255, 102, 112, 0.42);
+  }
+
+  .sidebar-author .sidebar-author-name {
+    margin: 8px 12px;
+    color: var(--red-1);
+  }
+
+  .sidebar-author .sidebar-description {
+    line-height: 1.6;
+    color: var(--grey-8);
+    text-align: center;
+  }
+
+  .sidebar-state {
+    padding: 22px 0 20px;
+  }
+
+  .sidebar-social-icon {
+    width: 38px;
+  }
+
+  .sidebar-top {
+    right: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    opacity: 0.88;
+    box-shadow: 0 10px 30px rgba(255, 102, 112, 0.22);
+  }
+
+  .sidebar-top .sidebar-top-taichi,
+  .sidebar-top .arrow-up:before {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+  }
+
+  @media (max-width: 959px) {
+    #header {
+      min-height: 430px;
+      height: 48vh;
     }
 
-    #nav,
-    .nav {
+    #content {
+      padding-top: 26px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #header-nav {
       min-height: 56px;
     }
 
-    .recent-post-item,
-    .card-widget {
-      border-radius: 12px;
+    #header {
+      min-height: 390px;
+      height: 54vh;
+    }
+
+    #logo {
+      letter-spacing: 0;
+    }
+
+    #content {
+      padding-top: 20px;
+    }
+
+    .post-wrap {
+      height: 420px;
+      margin-bottom: 24px;
+    }
+
+    .post-info {
+      padding: 18px 20px;
+    }
+
+    .post-meta {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .post-title {
+      font-size: 24px;
+    }
+
+    .post-cover {
+      width: 100%;
     }
   }
 
-  [data-theme="dark"] #nav,
-  [data-theme="dark"] .nav {
-    background: rgba(30, 32, 39, 0.82);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  [data-theme="dark"] #header-nav {
+    background: rgba(30, 32, 39, 0.78);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28);
+  }
+
+  [data-theme="dark"] #header-nav:hover {
+    background: rgba(30, 32, 39, 0.9);
   }
 </style>
 <meta name="generator" content="Hexo 8.1.2"></head>
