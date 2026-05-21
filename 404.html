@@ -58,17 +58,18 @@
     letter-spacing: 0;
   }
 
-  #nav,
-       .nav {
+       #nav,
+  .nav {
     min-height: 62px;
     background: rgba(255, 255, 255, 0.78);
     -webkit-backdrop-filter: blur(16px) saturate(135%);
     backdrop-filter: blur(16px) saturate(135%);
     box-shadow: 0 8px 30px rgba(40, 40, 40, 0.08);
+    transition: background 0.3s ease; /* 建議加上 transition，讓 hover 變化更平滑 */
   }
 
   #nav:hover,
-       .nav:hover {
+  .nav:hover {
     background: rgba(255, 255, 255, 0.9);
   }
 
