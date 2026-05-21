@@ -140,6 +140,12 @@
 .icon-github:before {
   content: '\f09b';
 }
+.icon-facebook:before {
+  content: '\f09a';
+}
+.icon-twitter:before {
+  content: '\e61b';
+}
 .icon-instagram:before {
   content: '\f16d';
 }
