@@ -268,6 +268,147 @@
   [data-theme="dark"] #header-nav:hover {
     background: rgba(30, 32, 39, 0.9);
   }
+
+  .friend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+    margin-top: 18px;
+  }
+
+  .friend-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 16px;
+    min-height: 88px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 102, 112, 0.12);
+    box-shadow: 0 12px 28px rgba(65, 49, 55, 0.08);
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+  }
+
+  .friend-card:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    border-color: rgba(255, 102, 112, 0.32);
+  }
+
+  .friend-card img {
+    width: 54px;
+    height: 54px;
+    margin: 0 !important;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+  }
+
+  .friend-card > div {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .friend-card::before,
+  .friend-card::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .friend-card h2,
+  .friend-card strong {
+    display: block;
+    margin: 0 0 4px;
+    color: var(--red-1);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .friend-card p,
+  .friend-card span {
+    display: block;
+    margin: 0;
+    color: var(--grey-5);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .friend-card i,
+  .friend-card svg,
+  .friend-card .fa,
+  .friend-card .icon,
+  .friend-card .friend-link,
+  .friend-card hr,
+  .friend-card .friend-line {
+    display: none !important;
+  }
+
+  .article:has(.friend-grid) .article-meta,
+  .article:has(.friend-grid) .hr-line,
+  .article:has(.friend-grid) .article-footer {
+    display: none;
+  }
+
+  .article:has(.friend-grid) .article-entry {
+    padding-top: 0;
+  }
+
+  [data-theme="dark"] .friend-card {
+    background: rgba(34, 40, 48, 0.96);
+    border-color: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  }
+
+  [data-theme="dark"] .friend-card:hover {
+    background: rgba(39, 45, 54, 0.98);
+    border-color: rgba(255, 115, 123, 0.28);
+  }
+
+  [data-theme="dark"] .friend-card h2,
+  [data-theme="dark"] .friend-card strong {
+    color: #ff737b;
+  }
+
+  [data-theme="dark"] .friend-card p,
+  [data-theme="dark"] .friend-card span {
+    color: rgba(255, 255, 255, 0.56);
+  }
+
+  @media (max-width: 767px) {
+    .friend-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .friend-card {
+      min-height: 78px;
+      padding: 14px 16px;
+      gap: 14px;
+    }
+
+    .friend-card img {
+      width: 52px;
+      height: 52px;
+    }
+
+    .friend-card h2,
+    .friend-card strong {
+      margin-bottom: 4px;
+      font-size: 19px;
+    }
+
+    .friend-card p,
+    .friend-card span {
+      font-size: 14px;
+    }
+  }
 </style>
 <meta name="generator" content="Hexo 8.1.2"></head>
 
@@ -494,6 +635,18 @@
     </a>
     <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fchiyan54554.github.io%2F2026%2F05%2F19%2Fhello-world%2F&amp;text=Hello%20World&amp;via=https%3A%2F%2Fchiyan54554.github.io" target="_blank" rel="noopener noreferrer" title="Hello World">
       <div class="share-icon icon icon-twitter">
+      </div>
+    </a>
+    <a href="https://bsky.app/intent/compose?text=Hello%20World%20https%3A%2F%2Fchiyan54554.github.io%2F2026%2F05%2F19%2Fhello-world%2F" target="_blank" rel="noopener noreferrer" title="Hello World">
+      <div class="share-icon icon icon-bluesky">
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fchiyan54554.github.io%2F2026%2F05%2F19%2Fhello-world%2F&amp;title=Hello%20World&amp;summary=Hello%20World&amp;mini=true&amp;ro=true" target="_blank" rel="noopener noreferrer" title="Hello World">
+      <div class="share-icon icon icon-linkedin">
+      </div>
+    </a>
+    <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fchiyan54554.github.io%2F2026%2F05%2F19%2Fhello-world%2F&amp;title=Hello%20World" target="_blank" rel="noopener noreferrer" title="Hello World">
+      <div class="share-icon icon icon-reddit">
       </div>
     </a>
 </div>

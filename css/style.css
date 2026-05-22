@@ -395,8 +395,17 @@ body [data-aos='zoom-in'] {
 .icon-twitter:before {
   content: '\e62a';
 }
+.icon-bluesky:before {
+  content: '\e64b';
+}
 .icon-instagram:before {
   content: '\e615';
+}
+.icon-linkedin:before {
+  content: '\e614';
+}
+.icon-reddit:before {
+  content: '\e61c';
 }
 .icon-discord:before {
   content: '\e60d';

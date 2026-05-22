@@ -146,8 +146,17 @@
 .icon-twitter:before {
   content: '\e61b';
 }
+.icon-bluesky:before {
+  content: '\e671';
+}
 .icon-instagram:before {
   content: '\f16d';
+}
+.icon-linkedin:before {
+  content: '\f08c';
+}
+.icon-reddit:before {
+  content: '\f1a1';
 }
 .icon-discord:before {
   content: '\f392';
