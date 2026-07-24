@@ -407,6 +407,25 @@
       font-size: 14px;
     }
   }
+
+  img,
+  picture,
+  .article-gallery-item,
+  .image-download-guard,
+  .image-download-guard-link {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  img,
+  .image-download-guard {
+    -webkit-user-drag: none;
+  }
+
+  .image-download-guard-link {
+    cursor: default !important;
+  }
 </style>
 <meta name="generator" content="Hexo 8.1.2"></head>
 
@@ -869,5 +888,114 @@
 
 
 
+      <script>
+  (() => {
+    const imageLinkPattern = /\.(?:png|jpe?g|gif|webp|svg|bmp|ico|avif)(?:[?#].*)?$/i;
+
+    function isElement(node) {
+      return node && node.nodeType === Node.ELEMENT_NODE;
+    }
+
+    function isProtectedTarget(target) {
+      return isElement(target) && Boolean(
+        target.closest("img, picture, .article-gallery-item, .image-download-guard-link")
+      );
+    }
+
+    function lockImage(img) {
+      if (!(img instanceof HTMLImageElement) || img.dataset.downloadLocked === "true") {
+        return;
+      }
+
+      img.dataset.downloadLocked = "true";
+      img.draggable = false;
+      img.classList.add("image-download-guard");
+
+      const anchor = img.closest("a");
+      if (!anchor) {
+        return;
+      }
+
+      const href = anchor.getAttribute("href") || "";
+      if (
+        anchor.classList.contains("article-gallery-item") ||
+        imageLinkPattern.test(href)
+      ) {
+        if (!anchor.dataset.originalHref && href) {
+          anchor.dataset.originalHref = href;
+        }
+        anchor.removeAttribute("href");
+        anchor.removeAttribute("target");
+        anchor.classList.add("image-download-guard-link");
+        anchor.setAttribute("aria-disabled", "true");
+      }
+    }
+
+    function protectImages(root = document) {
+      if (!isElement(root) && root !== document) {
+        return;
+      }
+
+      if (root instanceof HTMLImageElement) {
+        lockImage(root);
+        return;
+      }
+
+      root.querySelectorAll?.("img").forEach(lockImage);
+    }
+
+    function blockEvent(event) {
+      if (!isProtectedTarget(event.target)) {
+        return;
+      }
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    document.addEventListener("contextmenu", blockEvent, true);
+    document.addEventListener("dragstart", blockEvent, true);
+    document.addEventListener("selectstart", blockEvent, true);
+    document.addEventListener("copy", blockEvent, true);
+
+    document.addEventListener(
+      "click",
+      (event) => {
+        const link = isElement(event.target)
+          ? event.target.closest("a.image-download-guard-link, a.article-gallery-item")
+          : null;
+        if (!link) {
+          return;
+        }
+        event.preventDefault();
+        event.stopPropagation();
+      },
+      true
+    );
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (!isElement(node)) {
+            return;
+          }
+          protectImages(node);
+        });
+      });
+    });
+
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true });
+    } else {
+      window.addEventListener(
+        "DOMContentLoaded",
+        () => observer.observe(document.body, { childList: true, subtree: true }),
+        { once: true }
+      );
+    }
+
+    protectImages();
+    window.addEventListener("pjax:success", () => protectImages());
+  })();
+</script>
   </body>
   </html>
