@@ -33,12 +33,12 @@
 <meta property="og:url" content="https://chiyan54554.github.io/index.html">
 <meta property="og:site_name" content="Chiyan&#39;s Blog">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://chiyan54554.github.io/images/koyuki-banner.png">
+<meta property="og:image" content="https://chiyan54554.github.io/images/koyuki-banner-og.jpg">
 <meta property="article:author" content="赤焰 (Chiyan)">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://chiyan54554.github.io/images/koyuki-banner.png">
+<meta name="twitter:image" content="https://chiyan54554.github.io/images/koyuki-banner-og.jpg">
     <link rel="alternate" href="/atom.xml" title="Chiyan's Blog" type="application/atom+xml">
-    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="shortcut icon" href="/images/favicon.png">
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -136,8 +136,12 @@
 </div>
 <header id="header" aria-label="Site header">
       <picture>
+              <source media="(max-width: 767px)" srcset="/images/koyuki-banner-800.webp">
+              <source media="(max-width: 1279px)" srcset="/images/koyuki-banner-1280.webp">
+              <source media="(min-width: 1280px)" srcset="/images/koyuki-banner.webp">
+          <img  fetchpriority="high" src="/images/koyuki-banner.webp" alt="">
       </picture>
-        <img  fetchpriority="high" src="/images/koyuki-banner.png" alt="">
+        <img alt="" style="visibility: hidden;">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -156,7 +160,7 @@
   <div class="sidebar-wrapper">
     <div class="sidebar-wrap" data-aos="fade-up">
         <div class="sidebar-author">
-  <img data-src="/avatar/koyuki-avatar.png" data-sizes="auto" alt="赤焰 (Chiyan)" class="lazyload">
+  <img data-src="/avatar/koyuki-avatar.webp" data-sizes="auto" alt="赤焰 (Chiyan)" class="lazyload">
   <div class="sidebar-author-name">赤焰 (Chiyan)</div>
   <div class="sidebar-description"></div>
 </div>
@@ -230,7 +234,7 @@
   <div class="post-wrap left" data-aos="fade-up">
       <a class="post-link" href="/2026/05/22/2026-AIS3-Pre-exam-Writeup/" aria-label="AIS3 Pre-exam 2026 Write-up" title="AIS3 Pre-exam 2026 Write-up"></a>
     <div class="post-cover left">
-        <img data-src="/images/koyuki/%E9%9B%AAKoyuki__2025_10%E6%9C%88.png" data-sizes="auto" alt="AIS3 Pre-exam 2026 Write-up" class="lazyload">
+        <img data-src="/images/koyuki/%E9%9B%AAKoyuki__2025_10%E6%9C%88.webp" data-sizes="auto" alt="AIS3 Pre-exam 2026 Write-up" class="lazyload">
     </div>
     <div class="post-info">
       <div class="post-meta">
@@ -258,7 +262,7 @@ Miscwelcome進入題目後，畫面上只有一個一直變動的 QR code，沒�
   <div class="post-wrap right" data-aos="fade-up">
       <a class="post-link" href="/2026/05/19/hello-world/" aria-label="Hello World" title="Hello World"></a>
     <div class="post-cover right">
-        <img data-src="/images/koyuki/%E9%9B%AAKoyuki_2026_7%E6%9C%88.png" data-sizes="auto" alt="Hello World" class="lazyload">
+        <img data-src="/images/koyuki/%E9%9B%AAKoyuki_2026_7%E6%9C%88.webp" data-sizes="auto" alt="Hello World" class="lazyload">
     </div>
     <div class="post-info">
       <div class="post-meta">
@@ -315,7 +319,7 @@ Run server1$ hexo ser
       <nav id="mobile-nav" aria-label="Mobile navigation">
   <div class="sidebar-wrap">
       <div class="sidebar-author">
-  <img data-src="/avatar/koyuki-avatar.png" data-sizes="auto" alt="赤焰 (Chiyan)" class="lazyload">
+  <img data-src="/avatar/koyuki-avatar.webp" data-sizes="auto" alt="赤焰 (Chiyan)" class="lazyload">
   <div class="sidebar-author-name">赤焰 (Chiyan)</div>
   <div class="sidebar-description"></div>
 </div>
@@ -452,13 +456,7 @@ Run server1$ hexo ser
     };
   </script>
   
-<script src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js" integrity="sha384-xvLS0jfKuoREs7pqkRI&#x2F;OI8GcqohO5S+jQz7ZBtQXnsXmD+9jDOOY4cL6dCPzlrk" crossorigin="anonymous" defer></script>
-
-  
-<script src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js" integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l+M5Q2WH&#x2F;Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" crossorigin="anonymous" defer></script>
-
-  
-<script src="/js/algolia_search.js" defer></script>
+<script src="/js/lazy-algolia.js" defer data-algolia-src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js" data-algolia-integrity="sha384-xvLS0jfKuoREs7pqkRI&#x2F;OI8GcqohO5S+jQz7ZBtQXnsXmD+9jDOOY4cL6dCPzlrk" data-instantsearch-src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js" data-instantsearch-integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l+M5Q2WH&#x2F;Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" data-handler-src="/js/algolia_search.js"></script>
 
 
   <script>
