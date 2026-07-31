@@ -1,4 +1,4 @@
-const VERSION = "1785216600737";const preCache = ["/images/taichi.png","/images/koyuki-banner.webp","/css/loader.css","/css/style.css","/js/script.js"];const cacheDomain = [
+const VERSION = "1785521004964";const preCache = ["/images/taichi.png","/images/koyuki-banner.webp","/css/loader.css","/css/style.css","/js/script.js","/css/site-fonts.css","/css/site-custom.css","/fonts/mulish-latin-variable.woff2","/fonts/jetbrains-mono-latin-variable.woff2","/js/image-protection.js","/js/lazy-algolia.js","/js/lazy-code-tools.js","/js/lazy-photoswipe.js"];const cacheDomain = [
   "fonts.googleapis.com",
   "npm.webcache.cn",
   "unpkg.com",

@@ -330,6 +330,12 @@ img {
   -webkit-user-drag: none;
 }
 
+/* The theme hides images until Lazysizes adds this class. Native lazy loading
+   does not emit a load-state class, so generated images receive it up front. */
+img.lazyloaded {
+  opacity: 1;
+}
+
 .image-download-guard-link {
   cursor: default !important;
 }

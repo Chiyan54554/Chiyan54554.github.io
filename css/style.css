@@ -570,7 +570,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
-  font-family: 'Mulish','Noto Serif SC','Noto Serif TC', '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','PingFang TC','Microsoft JhengHei';
+  font-family: 'Mulish Variable',  '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','Segoe UI','PingFang TC','Microsoft JhengHei';
   transition: background 1s;
   text-autospace: normal;
   color: var(--color-default);
@@ -2049,7 +2049,7 @@ button {
 .article-entry pre,
 .article-entry code,
 .article-entry kbd {
-  font-family: 'JetBrains Mono', 'Menlo','Monaco','Consolas','monospace';
+  font-family: 'JetBrains Mono Variable',  'Menlo','Monaco','Consolas','monospace';
   font-size: 93.75%;
   transition: 0.3s;
   word-break: break-word;
@@ -2140,7 +2140,7 @@ button {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: 'JetBrains Mono', 'Menlo','Monaco','Consolas','monospace';
+  font-family: 'JetBrains Mono Variable',  'Menlo','Monaco','Consolas','monospace';
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
@@ -2163,7 +2163,7 @@ button {
 .article-entry .gist .gist-file .gist-meta {
   background: var(--highlight-background);
   color: var(--highlight-comment);
-  font: 0.85em  'Mulish','Noto Serif SC','Noto Serif TC', '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','PingFang TC','Microsoft JhengHei';
+  font: 0.85em 'Mulish Variable',  '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','Segoe UI','PingFang TC','Microsoft JhengHei';
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -2737,7 +2737,7 @@ pre .emphasis {
   color: var(--grey-9);
   font-size: 16px;
   vertical-align: middle;
-  font-family: 'Mulish','Noto Serif SC','Noto Serif TC', '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','PingFang TC','Microsoft JhengHei';
+  font-family: 'Mulish Variable',  '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','Segoe UI','PingFang TC','Microsoft JhengHei';
 }
 #reimu-search-input input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -2843,6 +2843,52 @@ pre .emphasis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.notification-wrapper {
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  right: 20px;
+  background: var(--color-header-background);
+  box-shadow: var(--shadow-card);
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin-left: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  color: var(--grey-7);
+}
+.notification-wrapper.show {
+  opacity: 1;
+  visibility: visible;
+}
+.notification-wrapper h1 {
+  padding: 12px 0;
+}
+.notification-wrapper p {
+  padding: 8px 0;
+}
+.notification-wrapper .notification-btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 8px 0;
+}
+.notification-wrapper button {
+  background: var(--red-2);
+  border-radius: 8px;
+  color: #fff;
+  padding: 4px 12px;
+  font-family: 'Mulish Variable',  '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','Segoe UI','PingFang TC','Microsoft JhengHei';
+  border: none;
+  transition: 0.3s;
+}
+.notification-wrapper button:hover {
+  background: var(--red-1);
+}
+.notification-wrapper button:active {
+  background: var(--red-0);
 }
 #sidebar {
   display: none;
@@ -3294,7 +3340,7 @@ pre .emphasis {
   transform: scale(0.8);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  font-family: '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','PingFang TC','Microsoft JhengHei';
+  font-family: '-apple-system','PingFang SC','Microsoft YaHei','sans-serif','Segoe UI','PingFang TC','Microsoft JhengHei';
 }
 #share-weixin img {
   filter: none !important;

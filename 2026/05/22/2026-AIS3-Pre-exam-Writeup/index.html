@@ -4,26 +4,15 @@
   >
   <head>
   <meta charset="utf-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=true"></script>
-  <script data-pjax>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', 'true');
-  </script>
-
   
   
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-TW":"複製成功 (*^▽^*)"},"fail":{"zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://chiyan54554.github.io';window.REIMU_CONFIG.relative = '/';</script>
+  
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-TW":"複製成功 (*^▽^*)"},"fail":{"zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.swPath = '/sw.js';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://chiyan54554.github.io';window.REIMU_CONFIG.relative = '/';</script>
   <title>
     AIS3 Pre-exam 2026 Write-up | Chiyan&#39;s Blog
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic|Noto Serif TC:400,400italic,700,700italic|JetBrains Mono:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic|Noto Serif TC:400,400italic,700,700italic|JetBrains Mono:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
+    
     <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     
 <link rel="stylesheet" href="/css/loader.css">
@@ -48,14 +37,15 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx/1oA/0l8ysE" crossorigin="anonymous">
+  
     
 <script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
 
     
 <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/site-custom.css">
+    <link rel="stylesheet" href="/css/site-fonts.css">
+<link rel="stylesheet" href="/css/site-custom.css">
 <meta name="generator" content="Hexo 8.1.2"></head>
 
   <body>
@@ -104,6 +94,14 @@
 <div id="copy-tooltip"></div>
 <div id="heatmap-tooltip"></div>
 
+  <div class="notification-wrapper">
+    <h1>發現新版本</h1>
+    <p>網站好像有新內容，是否更新？</p>
+    <div class="notification-btn">
+      <button id="notification-update-btn">更新</button>
+      <button id="notification-close-btn">取消</button>
+    </div>
+  </div>
 
     <div id="container">
       <div id="wrap">
@@ -165,7 +163,7 @@
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/koyuki-avatar.webp" data-sizes="auto" alt="赤焰 (Chiyan)" class="lazyload">
+  <img alt="赤焰 (Chiyan)" src="/avatar/koyuki-avatar.webp" loading="lazy" decoding="async" class="lazyloaded">
   <div class="sidebar-author-name">赤焰 (Chiyan)</div>
   <div class="sidebar-description"></div>
 </div>
@@ -257,7 +255,7 @@
     <div class="hr-line"></div>
     
     <div class="e-content article-entry" itemprop="articleBody">
-        <h2 id="AIS3-Pre-exam-2026-Write-up"><a href="#AIS3-Pre-exam-2026-Write-up" class="headerlink" title="AIS3 Pre-exam 2026 Write-up"></a>AIS3 Pre-exam 2026 Write-up</h2><h3 id="author"><a href="#author" class="headerlink" title="author"></a>author</h3><p><img src="https://postimg.cc/MnH6m6FB"></p>
+        <h2 id="AIS3-Pre-exam-2026-Write-up"><a href="#AIS3-Pre-exam-2026-Write-up" class="headerlink" title="AIS3 Pre-exam 2026 Write-up"></a>AIS3 Pre-exam 2026 Write-up</h2><h3 id="author"><a href="#author" class="headerlink" title="author"></a>author</h3><p><img src="https://postimg.cc/MnH6m6FB" loading="lazy" decoding="async" class="lazyloaded"></p>
 <h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="welcome"><a href="#welcome" class="headerlink" title="welcome"></a>welcome</h3><p>進入題目後，畫面上只有一個一直變動的 QR code，沒有其他按鈕或輸入框。</p>
 <p>解這題時主要抓住這幾個方向：</p>
 <ul>
@@ -989,7 +987,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
     <div class="article-nav-link-wrap right">
-        <img data-src="/images/koyuki/%E9%9B%AAKoyuki_2026_7%E6%9C%88.webp" data-sizes="auto" alt="Hello World" class="lazyload">
+        <img alt="Hello World" src="/images/koyuki/%E9%9B%AAKoyuki_2026_7%E6%9C%88.webp" loading="lazy" decoding="async" class="lazyloaded">
       <a href="/2026/05/19/hello-world/" aria-label="後一篇: Hello World"  title="後一篇: Hello World"></a>
       <div class="article-nav-caption">後一篇</div>
       <h3 class="article-nav-title">
@@ -1042,7 +1040,7 @@
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/koyuki-avatar.webp" data-sizes="auto" alt="赤焰 (Chiyan)" class="lazyload">
+  <img alt="赤焰 (Chiyan)" src="/avatar/koyuki-avatar.webp" loading="lazy" decoding="async" class="lazyloaded">
   <div class="sidebar-author-name">赤焰 (Chiyan)</div>
   <div class="sidebar-description"></div>
 </div>
@@ -1125,18 +1123,10 @@
             <div id="reimu-hits"></div>
             <div id="reimu-pagination" class="reimu-pagination"></div>
           </div>
-          <img class="reimu-bg" src="/images/reimu.png" loading="lazy" decoding="async" fetchpriority="low"/>
+          <img src="/images/reimu.png" loading="lazy" decoding="async" fetchpriority="low" class="reimu-bg lazyloaded">
         </div>
       </div>
     
-<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
-
-
-<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
-
-
-
-
 <script src="/js/script.js"></script>
 
 
@@ -1235,30 +1225,12 @@
         };
       </script>
         
-<script src="/js/insert_highlight.js" data-pjax></script>
+<script src="/js/lazy-code-tools.js" data-pjax></script>
 
       
 <script src="/js/tabs.js" data-pjax defer></script>
 
-      <script type="module" data-pjax>
-        (async () => {
-          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
-          const initPswp = (gallery, children) => {
-            if (_$$(`${gallery} ${children}`).length > 0) {
-              new PhotoSwipeLightbox({
-                gallery,
-                children,
-                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
-              }).init();
-            }
-          }
-          const pswp = () => {
-            initPswp('.article-entry', 'a.article-gallery-item');
-            initPswp('.article-gallery', 'a.article-gallery-item');
-          }
-          pswp();
-        })();
-      </script>
+      
         
 
 
@@ -1281,15 +1253,9 @@
 
 
 
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
-</script>
+  
+<script src="/js/service_worker.js"></script>
+
 
 
 
