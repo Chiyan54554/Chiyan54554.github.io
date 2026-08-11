@@ -1,7 +1,7 @@
 (() => {
   const covers = ["/images/koyuki/%E9%9B%AAKoyuki__2025_10%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki__2025_11%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki_2026_1%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki_2026_3%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki_2026_4%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki_2026_5%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki_2026_6%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki_2026_7%E6%9C%88.webp","/images/koyuki/%E9%9B%AAKoyuki_2026_8%E6%9C%88.webp"];
   const selector = [
-    "#header > img[fetchpriority='high']",
+    "#header img[fetchpriority='high']",
     ".post-cover img",
     ".article-nav-link-wrap img",
     ".post-categories-cover img",
@@ -48,9 +48,13 @@
   function randomizeKoyukiCovers() {
     if (covers.length < 2) return;
 
-    const images = [...document.querySelectorAll(selector)].filter((image) =>
-      (image.getAttribute("src") || "").includes("/images/koyuki/"),
-    );
+    const images = [...document.querySelectorAll(selector)].filter((image) => {
+      const isHeaderImage = image.closest("#header") !== null;
+      const isKoyukiCover = (image.getAttribute("src") || "").includes(
+        "/images/koyuki/",
+      );
+      return isHeaderImage || isKoyukiCover;
+    });
     const assignments = new Map();
     const used = new Set();
 
@@ -64,8 +68,11 @@
       }
 
       const cover = assignments.get(key);
+      image.closest("picture")?.querySelectorAll("source").forEach((source) => {
+        source.srcset = cover;
+      });
       image.src = cover;
-      if (image.parentElement?.id === "header" && window.REIMU_POST) {
+      if (image.closest("#header") && window.REIMU_POST) {
         window.REIMU_POST.cover = cover;
       }
     });

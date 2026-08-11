@@ -1,4 +1,4 @@
-const VERSION = "1786449306173";const preCache = ["/images/taichi.png","/images/koyuki-banner.webp","/css/loader.css","/css/style.css","/js/script.js","/css/site-fonts.css","/css/site-custom.css","/fonts/mulish-latin-variable.woff2","/fonts/jetbrains-mono-latin-variable.woff2","/js/image-protection.js","/js/lazy-algolia.js","/js/lazy-code-tools.js","/js/lazy-photoswipe.js","/js/random-koyuki-cover.js"];const cacheDomain = [
+const VERSION = "1786449539783";const preCache = ["/images/taichi.png","/images/koyuki-banner.webp","/css/loader.css","/css/style.css","/js/script.js","/css/site-fonts.css","/css/site-custom.css","/fonts/mulish-latin-variable.woff2","/fonts/jetbrains-mono-latin-variable.woff2","/js/image-protection.js","/js/lazy-algolia.js","/js/lazy-code-tools.js","/js/lazy-photoswipe.js","/js/random-koyuki-cover.js"];const cacheDomain = [
   "fonts.googleapis.com",
   "npm.webcache.cn",
   "unpkg.com",
