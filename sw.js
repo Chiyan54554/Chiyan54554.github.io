@@ -1,91 +1,25 @@
-const VERSION = "1786509281298";const preCache = ["/images/taichi.png","/images/koyuki-banner.webp","/css/loader.css","/css/style.css","/js/script.js","/css/site-fonts.css","/css/site-custom.css","/fonts/mulish-latin-variable.woff2","/fonts/jetbrains-mono-latin-variable.woff2","/fonts/reimu-icons.woff2","/js/image-protection.js","/js/lazy-algolia.js","/js/lazy-code-tools.js","/js/lazy-photoswipe.js","/js/random-koyuki-cover.js","/vendor/aos.css","/vendor/firework.umd.js","/vendor/pace.min.js","/vendor/pjax.umd.js","/vendor/typed.umd.js"];const cacheDomain = [
-  "fonts.googleapis.com",
-  "npm.webcache.cn",
-  "unpkg.com",
-  "fastly.jsdelivr.net",
-  "cdn.jsdelivr.net",
-];
-
-// 安装时预加载必要内容
+// Remove the legacy offline cache and return all pages to normal HTTP caching.
 self.addEventListener("install", (event) => {
-  console.log(`Service Worker ${VERSION} installing.`);
-  event.waitUntil(caches.open(VERSION).then((cache) => cache.addAll(preCache)));
+  event.waitUntil(self.skipWaiting());
 });
 
-async function cacheRequest(request, options) {
-  try {
-    const responseToCache = await fetch(request);
-    const cache = await caches.open(VERSION);
-    if (!/^https?:$/i.test(new URL(request.url).protocol))
-      return responseToCache;
-    cache.put(request, responseToCache.clone());
-    return responseToCache;
-  } catch (e) {
-    const responseToCache = await fetch(request, options);
-    const cache = await caches.open(VERSION);
-    if (!/^https?:$/i.test(new URL(request.url).protocol))
-      return responseToCache;
-    cache.put(request, responseToCache.clone());
-    return responseToCache;
-  }
-}
+self.addEventListener("activate", (event) => {
+  event.waitUntil((async () => {
+    const cacheNames = await caches.keys();
+    await Promise.all(cacheNames.map((cacheName) => caches.delete(cacheName)));
+    await self.clients.claim();
 
-async function respondRequest(request, options) {
-  const response = await caches.match(request);
-  if (response) {
-    return response;
-  }
-  return cacheRequest(request, options);
-}
+    const windowClients = await self.clients.matchAll({ type: "window" });
+    await Promise.all(windowClients.map((client) => {
+      const url = new URL(client.url);
+      url.searchParams.set("site-cache-reset", Date.now().toString());
+      return client.navigate(url.toString());
+    }));
+
+    await self.registration.unregister();
+  })());
+});
 
 self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-  // 检查请求的域名是否在 CacheDomain 中
-  if (cacheDomain.includes(url.hostname)) {
-    event.respondWith(respondRequest(event.request));
-  } else {
-    // 检查请求是否为 POST 或带有查询参数的 GET 这样可避免错误缓存
-    if (
-      event.request.method === "POST" ||
-      (event.request.method === "GET" && url.search)
-    ) {
-      try {
-        event.respondWith(fetch(event.request));
-      } catch (e) {
-        event.respondWith(fetch(event.request, { mode: "no-cors" }));
-      }
-    } else {
-      event.respondWith(respondRequest(event.request, { mode: "no-cors" }));
-    }
-  }
-});
-
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (VERSION !== cacheName) {
-            console.log(`Service Worker: deleting old cache ${cacheName}`);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-  console.log(`Service Worker ${VERSION} activated.`);
-});
-
-self.addEventListener("message", (event) => {
-  console.log("Service Worker: message received");
-  if (event.data === "skipWaiting") {
-    self.skipWaiting();
-  }
-});
-
-
-// Static deployments should switch to the newest cache without user cleanup.
-self.addEventListener("install", () => self.skipWaiting());
-self.addEventListener("activate", (event) => {
-  event.waitUntil(self.clients.claim());
+  event.respondWith(fetch(event.request));
 });
