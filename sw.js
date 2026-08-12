@@ -1,4 +1,4 @@
-const VERSION = "1786449539783";const preCache = ["/images/taichi.png","/images/koyuki-banner.webp","/css/loader.css","/css/style.css","/js/script.js","/css/site-fonts.css","/css/site-custom.css","/fonts/mulish-latin-variable.woff2","/fonts/jetbrains-mono-latin-variable.woff2","/js/image-protection.js","/js/lazy-algolia.js","/js/lazy-code-tools.js","/js/lazy-photoswipe.js","/js/random-koyuki-cover.js"];const cacheDomain = [
+const VERSION = "1786509281298";const preCache = ["/images/taichi.png","/images/koyuki-banner.webp","/css/loader.css","/css/style.css","/js/script.js","/css/site-fonts.css","/css/site-custom.css","/fonts/mulish-latin-variable.woff2","/fonts/jetbrains-mono-latin-variable.woff2","/fonts/reimu-icons.woff2","/js/image-protection.js","/js/lazy-algolia.js","/js/lazy-code-tools.js","/js/lazy-photoswipe.js","/js/random-koyuki-cover.js","/vendor/aos.css","/vendor/firework.umd.js","/vendor/pace.min.js","/vendor/pjax.umd.js","/vendor/typed.umd.js"];const cacheDomain = [
   "fonts.googleapis.com",
   "npm.webcache.cn",
   "unpkg.com",
@@ -81,4 +81,11 @@ self.addEventListener("message", (event) => {
   if (event.data === "skipWaiting") {
     self.skipWaiting();
   }
+});
+
+
+// Static deployments should switch to the newest cache without user cleanup.
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", (event) => {
+  event.waitUntil(self.clients.claim());
 });

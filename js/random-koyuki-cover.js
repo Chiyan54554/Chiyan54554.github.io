@@ -45,6 +45,30 @@
     return candidates[Math.floor(Math.random() * candidates.length)];
   }
 
+  function getVariant(cover, directory) {
+    return cover.replace("/images/koyuki/", "/images/koyuki/" + directory + "/");
+  }
+
+  function setResponsiveSources(image, cover) {
+    const mobile = getVariant(cover, "mobile");
+    const tablet = getVariant(cover, "tablet");
+
+    image.closest("picture")?.querySelectorAll("source").forEach((source) => {
+      if (source.media.includes("767px")) {
+        source.srcset = mobile;
+      } else if (source.media.includes("1279px")) {
+        source.srcset = tablet;
+      } else {
+        source.srcset = cover;
+      }
+    });
+    image.srcset = mobile + " 960w, " + tablet + " 1280w, " + cover + " 1920w";
+    image.sizes = image.closest("#header")
+      ? "100vw"
+      : "(max-width: 767px) 100vw, 38vw";
+    image.src = cover;
+  }
+
   function randomizeKoyukiCovers() {
     if (covers.length < 2) return;
 
@@ -68,10 +92,7 @@
       }
 
       const cover = assignments.get(key);
-      image.closest("picture")?.querySelectorAll("source").forEach((source) => {
-        source.srcset = cover;
-      });
-      image.src = cover;
+      setResponsiveSources(image, cover);
       if (image.closest("#header") && window.REIMU_POST) {
         window.REIMU_POST.cover = cover;
       }

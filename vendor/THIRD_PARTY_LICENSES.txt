@@ -1,0 +1,11 @@
+The files in this directory are unmodified browser distributions of these
+MIT-licensed projects:
+
+- @reimujs/aos 0.1.2: https://github.com/D-Sketon/aos.js
+- mouse-firework 0.2.0: https://github.com/D-Sketon/mouse-firework
+- pace-js 1.2.4: https://github.com/CodeByZach/pace
+- theme-shokax-pjax 0.0.3: https://github.com/theme-shoka-x/theme-shokax-pjax
+- typed.js 2.1.0: https://github.com/mattboldt/typed.js
+
+Each project remains copyright its respective authors and is redistributed
+under its MIT license.
